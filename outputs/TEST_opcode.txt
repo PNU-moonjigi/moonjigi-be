@@ -1,0 +1,1 @@
+[1;31m[PHP Parse error:  syntax error, unexpected '{', expecting '(' in /Users/jiwon/Library/Mobile Documents/com~apple~CloudDocs/졸업과제/backend/outputs/TEST.php on line 3][0m

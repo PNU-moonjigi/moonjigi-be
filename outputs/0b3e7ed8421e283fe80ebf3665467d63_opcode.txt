@@ -1,0 +1,7 @@
+function name: (null)
+L1-975 {main}() /Users/jiwon/Library/Mobile Documents/com~apple~CloudDocs/졸업과제/backend/outputs/0b3e7ed8421e283fe80ebf3665467d63.php - 0x101e62a80 + 4 ops
+ L1    #0     ECHO                    "//"                                                          
+ L2    #1     INIT_FCALL_BY_NAME                           "run"                                    
+ L2    #2     DO_FCALL                                                                              
+ L975  #3     RETURN<-1>              1                                                             
+[0;32m[Script ended normally][0m
