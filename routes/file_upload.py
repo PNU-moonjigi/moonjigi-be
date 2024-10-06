@@ -9,6 +9,7 @@ import pandas as pd
 import json
 import numpy as np
 
+
 file_upload_bp = Blueprint('file_upload', __name__)
 
 UPLOAD_FOLDER = 'uploads/'
