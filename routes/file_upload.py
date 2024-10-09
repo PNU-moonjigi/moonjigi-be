@@ -14,7 +14,7 @@ file_upload_bp = Blueprint('file_upload', __name__)
 
 UPLOAD_FOLDER = 'uploads/'
 OUTPUT_FOLDER = 'outputs/'
-MODEL_PATH = 'model/xgboost_model.json'
+MODEL_PATH = 'model/xgboost_model.model'
 
 if not os.path.exists(UPLOAD_FOLDER):
     os.makedirs(UPLOAD_FOLDER)
