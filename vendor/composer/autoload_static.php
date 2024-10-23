@@ -4,12 +4,19 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit9622dd827becd4430ae91af9e0a4face
+class ComposerStaticInit10a7a742f7bd49614ae1be42dc4438b4
 {
     public static $prefixLengthsPsr4 = array (
         'P' => 
         array (
             'PhpParser\\' => 10,
+            'PHPDeobfuscator\\' => 16,
+        ),
+        'L' => 
+        array (
+            'League\\MimeTypeDetection\\' => 25,
+            'League\\Flysystem\\InMemory\\' => 26,
+            'League\\Flysystem\\' => 17,
         ),
     );
 
@@ -17,6 +24,22 @@ class ComposerStaticInit9622dd827becd4430ae91af9e0a4face
         'PhpParser\\' => 
         array (
             0 => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser',
+        ),
+        'PHPDeobfuscator\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/src',
+        ),
+        'League\\MimeTypeDetection\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/league/mime-type-detection/src',
+        ),
+        'League\\Flysystem\\InMemory\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/league/flysystem-memory',
+        ),
+        'League\\Flysystem\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/league/flysystem/src',
         ),
     );
 
@@ -27,9 +50,9 @@ class ComposerStaticInit9622dd827becd4430ae91af9e0a4face
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInit9622dd827becd4430ae91af9e0a4face::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit9622dd827becd4430ae91af9e0a4face::$prefixDirsPsr4;
-            $loader->classMap = ComposerStaticInit9622dd827becd4430ae91af9e0a4face::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit10a7a742f7bd49614ae1be42dc4438b4::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit10a7a742f7bd49614ae1be42dc4438b4::$prefixDirsPsr4;
+            $loader->classMap = ComposerStaticInit10a7a742f7bd49614ae1be42dc4438b4::$classMap;
 
         }, null, ClassLoader::class);
     }

@@ -7,4 +7,8 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'PhpParser\\' => array($vendorDir . '/nikic/php-parser/lib/PhpParser'),
+    'PHPDeobfuscator\\' => array($baseDir . '/src'),
+    'League\\MimeTypeDetection\\' => array($vendorDir . '/league/mime-type-detection/src'),
+    'League\\Flysystem\\InMemory\\' => array($vendorDir . '/league/flysystem-memory'),
+    'League\\Flysystem\\' => array($vendorDir . '/league/flysystem/src'),
 );
