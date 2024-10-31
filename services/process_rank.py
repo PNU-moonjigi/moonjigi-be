@@ -151,7 +151,7 @@ def process_ast_and_opcode(opcode_filepath, ast_filepath):
     ranked_words_result = convert_numpy_to_python_float(ranked_words_result)
 
     # 결과 출력 확인
-    print(f"Ranked Words Result: {ranked_words_result}")  # 이 부분 추가
+    # print(f"Ranked Words Result: {ranked_words_result}")  # 이 부분 추가
     
     # JSON 형식으로 변환하여 반환
     # return json.dumps(c, ensure_ascii=False)
